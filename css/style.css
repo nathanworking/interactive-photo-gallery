@@ -40,6 +40,7 @@ figcaption {
 section {
   max-width: 980px;
   margin: 0 auto;
+  padding-left: 30px;
 }
   section a{
     color: #e5e5e5;
@@ -64,9 +65,30 @@ section {
     background: none;
   }
     .featherlight-content img{
-      max-width: 600px;
+      max-width: 800px;
       height: auto;
     }
+
+      .featherlight-next span {
+        right: -100px;
+        position: absolute;
+        top: 50%;
+        cursor: pointer;
+        color: transparent;
+        background: url(/img/next.svg) no-repeat;
+        width: 60px;
+        height: 50px;
+        }
+      .featherlight-previous span {
+        left: -60px;
+        position: absolute;
+        top: 50%;
+        cursor: pointer;
+        color: transparent;
+        background: url(/img/previous.svg) no-repeat;
+        width: 60px;
+        height: 50px;
+      }
 
 
   .featherlight .featherlight-content {
