@@ -41,56 +41,53 @@ figcaption {
   margin-bottom: 10px;
   background: #e5e5e5;
   transition-duration: 200ms;
+  text-align: center;
 }
   #search:focus {
     outline: none;
     border-bottom: 4px solid rgb(0, 140, 121);
   }
 
-section {
+.lg, #lightgallery {
   max-width: 980px;
   margin: 0 auto;
   padding-left: 30px;
 }
-  section a{
+  #lightgallery a{
     color: #e5e5e5;
     text-decoration: none;
   }
-  section a img{
+  #lightgallery a img{
     border-radius: 5px;
     box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, .2);
     margin: 15px 30px 15px 0;
     transition-duration: 300ms;
   }
-    section a img:hover{
+    #lightgallery a img:hover{
       border-radius: 5px;
       box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, .1);
     }
 
+.lg-backdrop {
+  background: rgba(0, 0, 0, .8)}
+}
 
-/******* Featherlight Plugin Edits ***/
-  .featherlight-content {
-    max-width: 100%;
-    height: auto;
+.lg-outer .lg-item {
+  background: none;
+}
+
+.lg-outer .lg-img-wrap, .lg-outer .lg-item {
+    text-align: center;
+    position: relative;
+    max-width: 800px;
+    height: 100%;
+  }
+
+  .lg-actions .lg-next, .lg-actions .lg-prev, .lg-sub-html, .lg-toolbar {
     background: none;
   }
-    .featherlight-content img{
-      max-width: 800px;
-      height: auto;
-    }
-
-      .featherlight-next span {
+    .lg-actions .lg-prev:after {
         right: -100px;
-        position: absolute;
-        top: 50%;
-        cursor: pointer;
-        color: transparent;
-        background: url(/img/next.svg) no-repeat;
-        width: 60px;
-        height: 50px;
-        }
-      .featherlight-previous span {
-        left: -60px;
         position: absolute;
         top: 50%;
         cursor: pointer;
@@ -99,17 +96,17 @@ section {
         width: 60px;
         height: 50px;
       }
-
-
-  .featherlight .featherlight-content {
-    background: none;
-    overflow: visible;
-  }
-
-  .featherlight:last-of-type {
-    background: rgba(46, 46, 46, 0.94);
-  }
-
-  .featherlight-close-icon {
+    .lg-actions .lg-next:before {
+        left: -60px;
+        position: absolute;
+        top: 50%;
+        cursor: pointer;
+        color: transparent;
+        background: url(/img/next.svg) no-repeat;
+        width: 60px;
+        height: 50px;
+      }
+/* Hide toolbar becuase I don't need these right now */
+  div.lg-toolbar.group{
     display: none;
   }

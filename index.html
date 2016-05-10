@@ -5,77 +5,70 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Interactive Photo Gallery // Nathan Anderson</title>
   <link href='https://fonts.googleapis.com/css?family=Muli:300,300italic,400italic,400' rel='stylesheet' type='text/css'>
-  <link href="//cdn.rawgit.com/noelboss/featherlight/1.4.1/release/featherlight.min.css" type="text/css" rel="stylesheet" />
+  <link rel="stylesheet" href="js/plugins/lightgallery/lightgallery.min.css" />
   <link rel="stylesheet" href="css/style.css" />
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 </head>
 
 <body>
 
   <div>
-    <input id="search" name="search" placeholder="Start typing here" type="text" data-list=".gallery">
+    <input id="search" name="search" placeholder="Type to filter" type="text" data-list="#captions">
   </div>
 
-  <section class="gallery"
-    data-featherlight-gallery
-    data-featherlight-filter="a">
-
-      <a href="/img/01.jpg">
-        <img src="/img/thumbnails/01.jpg" alt="Hay Bales">
-        <figcaption>I love hay bales. Took this snap on a drive through the countryside past some straw fields.</figcaption>
+    <div id="lightgallery">
+      <a href="img/01.jpg" data-sub-html="#caption01">
+          <img src="img/thumbnails/01.jpg" alt="Hay Bales">
+          <figcaption id="caption01" >I love hay bales. Took this snap on a drive through the countryside past some straw fields.</figcaption>
       </a>
-      <a href="/img/02.jpg">
-        <img src="/img/thumbnails/02.jpg" alt="Lake">
-        <figcaption>The lake was so calm today. We had a great view of the snow on the mountains from here.</figcaption>
+      <a href="img/02.jpg" data-sub-html="#caption02">
+          <img src="img/thumbnails/02.jpg" alt="Lake">
+          <figcaption id="caption02" >The lake was so calm today. We had a great view of the snow on the mountains from here.</figcaption>
       </a>
-      <a href="/img/03.jpg">
-        <img src="/img/thumbnails/03.jpg" alt="Canyon">
-        <figcaption>I hiked to the top of the mountain and got this picture of the canyon and trees below.</figcaption>
+      <a href="img/03.jpg" data-sub-html="#caption03" >
+          <img src="img/thumbnails/03.jpg" alt="Canyon">
+          <figcaption id="caption03" >I hiked to the top of the mountain and got this picture of the canyon and trees below.</figcaption>
       </a>
-      <a href="/img/04.jpg">
-        <img src="/img/thumbnails/04.jpg" alt="Iceberg">
-        <figcaption>It was amazing to see an iceberg up close, it was so cold but didn’t snow today.</figcaption>
+      <a href="img/04.jpg" data-sub-html="#caption04" >
+          <img src="img/thumbnails/04.jpg" alt="Iceberg">
+          <figcaption id="caption04" >It was amazing to see an iceberg up close, it was so cold but didn’t snow today.</figcaption>
       </a>
-      <a href="/img/05.jpg">
-        <img src="/img/thumbnails/05.jpg" alt="Desert">
-        <figcaption>The red cliffs were beautiful. It was really hot in the desert but we did a lot of walking through the canyons.</figcaption>
+      <a href="img/05.jpg" data-sub-html="#caption05" >
+          <img src="img/thumbnails/05.jpg" alt="Desert">
+          <figcaption id="caption05" >The red cliffs were beautiful. It was really hot in the desert but we did a lot of walking through the canyons.</figcaption>
       </a>
-      <a href="/img/06.jpg">
-        <img src="/img/thumbnails/06.jpg" alt="Fall">
-        <figcaption>Fall is coming, I love when the leaves on the trees start to change color.</figcaption>
+      <a href="img/06.jpg" data-sub-html="#caption06">
+          <img src="img/thumbnails/06.jpg" alt="Fall">
+          <figcaption id="caption06" >Fall is coming, I love when the leaves on the trees start to change color.</figcaption>
       </a>
-      <a href="/img/07.jpg">
-        <img src="/img/thumbnails/07.jpg" alt="Plantation">
-        <figcaption>I drove past this plantation yesterday, everything is so green!</figcaption>
+      <a href="img/07.jpg" data-sub-html="#caption07">
+          <img src="img/thumbnails/07.jpg" alt="Plantation">
+          <figcaption id="caption07" >I drove past this plantation yesterday, everything is so green!</figcaption>
       </a>
-      <a href="/img/08.jpg">
-        <img src="/img/thumbnails/08.jpg" alt="Dunes">
-        <figcaption>My summer vacation to the Oregon Coast. I love the sandy dunes!</figcaption>
+      <a href="img/08.jpg" data-sub-html="#caption08">
+          <img src="img/thumbnails/08.jpg" alt="Dunes">
+          <figcaption id="caption08" >My summer vacation to the Oregon Coast. I love the sandy dunes!</figcaption>
       </a>
-      <a href="/img/09.jpg">
-        <img src="/img/thumbnails/09.jpg" alt="Countryside Lane">
-        <figcaption>We enjoyed a quiet stroll down this countryside lane.</figcaption>
+      <a href="img/09.jpg" data-sub-html="#caption09">
+          <img src="img/thumbnails/09.jpg" alt="Countryside Lane">
+          <figcaption id="caption09" >We enjoyed a quiet stroll down this countryside lane.</figcaption>
       </a>
-      <a href="/img/10.jpg">
-        <img src="/img/thumbnails/10.jpg" alt="Sunset">
-        <figcaption>Sunset at the coast! The sky turned a lovely shade of orange.</figcaption>
+      <a href="img/10.jpg" data-sub-html="#caption10">
+          <img src="img/thumbnails/10.jpg" alt="Sunset">
+          <figcaption id="caption10" >Sunset at the coast! The sky turned a lovely shade of orange.</figcaption>
       </a>
-      <a href="/img/11.jpg">
-        <img src="/img/thumbnails/11.jpg" alt="Cave">
-        <figcaption>I did a tour of a cave today and the view of the landscape below was breathtaking.</figcaption>
+      <a href="img/11.jpg" data-sub-html="#caption11">
+          <img src="img/thumbnails/11.jpg" alt="Cave">
+          <figcaption id="caption11" >I did a tour of a cave today and the view of the landscape below was breathtaking.</figcaption>
       </a>
-      <a href="/img/12.jpg">
-        <img src="/img/thumbnails/12.jpg" alt="Bluebells">
-        <figcaption>I walked through this meadow of bluebells and got a good view of the snow on the mountain before the fog came in.</figcaption>
+      <a href="img/12.jpg" data-sub-html="#caption12">
+          <img src="img/thumbnails/12.jpg" alt="Bluebells">
+          <figcaption id="caption12" >I walked through this meadow of bluebells and got a good view of the snow on the mountain before the fog came in.</figcaption>
       </a>
-
-  </section>
-
+    </div>
+    <script src="js/plugins/lightgallery/lightgallery-all.min.js" type="text/javascript"></script>
+    <script src="js/plugins/hideseek/jquery.hideseek.min.js" type="text/javascript"></script>
+    <script src="js/main.js" type="text/javascript"></script>
   </body>
-  <script src="//code.jquery.com/jquery-latest.js"></script>
-  <script src="js/plugins/featherlight/featherlight.js" type="text/javascript"></script>
-  <script src="js/plugins/featherlight/featherlight.gallery.js" type="text/javascript"></script>
-  <script src="js/plugins/hideseek/jquery.hideseek.min.js" type="text/javascript"></script>
-  <script src="js/main.js" type="text/javascript"></script>
 
 </html>
