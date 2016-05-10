@@ -1,12 +1,14 @@
-var $caption = $("<p></p>");
-
-
+//----------------------------------------------------------------//
+//------------// Showing Captions on Lightbox View //------------//
+//----------------------------------------------------------------//
 $(document).ready(function(){
-	$('.gallery').featherlightGallery();
+	var $caption = $("<p></p>");
+	//Get child's title attribute and set caption
+	var captionText = $('a figcaption');
+	$caption.text(captionText);
 
-  //Get child's title attribute and set caption
-  var captionText = $(this).children("img").attr("alt");
-  $caption.text(captionText);
+	//A caption to overlay
+	$('div .featherlight-content').append($caption);
 });
 
 //----------------------------------------------------------------//
