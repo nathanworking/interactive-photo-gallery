@@ -24,9 +24,13 @@ a {
   text-decoration: underline;
 }
 
-figcaption {
+.caption-box {
   display: none;
 }
+
+  .caption-box {
+    display: none;
+  }
 
 .search-box {
   text-align: center;
@@ -56,7 +60,6 @@ figcaption {
 .lg, #lightgallery {
   max-width: 980px;
   margin: 0 auto;
-  padding-left: 30px;
 }
 #lightgallery{
   text-align: center;
@@ -64,11 +67,13 @@ figcaption {
   #lightgallery a{
     color: #e5e5e5;
     text-decoration: none;
+    width: 23.3333%;
+    margin-top: 30px;
+    display: inline-block;
   }
   #lightgallery a img{
     border-radius: 5px;
     box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, .2);
-    margin: 15px 30px 15px 0;
     transition-duration: 300ms;
   }
     #lightgallery a img:hover{
