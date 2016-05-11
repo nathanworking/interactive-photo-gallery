@@ -98,8 +98,14 @@ a {
     }
 
 .lg-sub-html {
-  margin-bottom: 25%;
+  max-width: 900px;
+  margin: 0 auto 335px auto;
 }
+  @media (max-height: 1250px) {
+    .lg-sub-html {
+      margin-bottom: 0;
+    }
+  }
 
   .lg-actions .lg-next, .lg-actions .lg-prev, .lg-sub-html, .lg-toolbar {
     background: none;
