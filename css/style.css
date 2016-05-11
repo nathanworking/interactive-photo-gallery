@@ -12,7 +12,8 @@
 body {
   margin: 0;
   padding: 0;
-  text-align: center;
+  /*text-align: center; This is the problem*/
+  /* I Moved this to #lightgallery */
   font-family: 'Muli', Helvetica, Arial, Sans-Serif;
   color: #282828;
   background: #e5e5e5;
@@ -25,6 +26,10 @@ a {
 
 figcaption {
   display: none;
+}
+
+.search-box {
+  text-align: center;
 }
 
 #search {
@@ -53,6 +58,9 @@ figcaption {
   margin: 0 auto;
   padding-left: 30px;
 }
+#lightgallery{
+  text-align: center;
+}
   #lightgallery a{
     color: #e5e5e5;
     text-decoration: none;
@@ -69,7 +77,7 @@ figcaption {
     }
 
 .lg-backdrop {
-  background: rgba(0, 0, 0, .8)}
+  background: rgba(0, 0, 0, .8)
 }
 
 .lg-outer .lg-item {
@@ -77,11 +85,16 @@ figcaption {
 }
 
 .lg-outer .lg-img-wrap, .lg-outer .lg-item {
-    text-align: center;
-    position: relative;
-    max-width: 800px;
+    max-width: 100%;
     height: 100%;
   }
+    .lg-outer .lg-image {
+      max-width: 800px;
+    }
+
+.lg-sub-html {
+  margin-bottom: 25%;
+}
 
   .lg-actions .lg-next, .lg-actions .lg-prev, .lg-sub-html, .lg-toolbar {
     background: none;
@@ -92,7 +105,7 @@ figcaption {
         top: 50%;
         cursor: pointer;
         color: transparent;
-        background: url(/img/previous.svg) no-repeat;
+        background: url('/img/previous.svg') no-repeat;
         width: 60px;
         height: 50px;
       }
@@ -102,7 +115,7 @@ figcaption {
         top: 50%;
         cursor: pointer;
         color: transparent;
-        background: url(/img/next.svg) no-repeat;
+        background: url('/img/next.svg') no-repeat;
         width: 60px;
         height: 50px;
       }
